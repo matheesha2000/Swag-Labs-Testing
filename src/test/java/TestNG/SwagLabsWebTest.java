@@ -54,9 +54,11 @@ public class SwagLabsWebTest {
             System.out.println("Login Failure, Can't Load the Product Page\n");
         }
 
-        System.out.println("----------------------------------------------------------------------------------------");
+        System.out.println("----------------------------------------------------------------------------------------\n");
 
-        Thread.sleep(5000);
+        Thread.sleep(3000);
+
+
 
     }
 
@@ -68,62 +70,142 @@ public class SwagLabsWebTest {
         System.out.println("================================= Test 002 ============================================\n");
         System.out.println("PRODUCT DETAILS TEST CASE\n");
 
-        //------------------------------ Product 1: Sauce Labs Backpack----------------------------------//
+        //------------------------------ Product 1: Sauce Labs Backpack ----------------------------------//
 
         //--------------Check Product 01 Details----------------//
         System.out.println("Verify the Product 01 details\n");
 
+        //Clicked the card product title
+        driver.findElement(By.xpath("//*[@id=\"item_4_title_link\"]/div")).click();
+
         //Check Product 01 title
-        System.out.println("Product 01 Title Test\n");
+        System.out.println("Product 01 Title Test");
 
         actualText = "Sauce Labs Backpack";
-        expectedText = driver.findElement(By.xpath("//*[@id=\"item_4_title_link\"]/div")).getText();
+        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[1]")).getText();
 
         //Print actual text
         System.out.println("Test Case 002 Product 01 Title Actual Text:"+ actualText);
 
         if (expectedText.equals(actualText)) {
-            System.out.println("Product 01 Title Test Passed");
+            System.out.println("Product 01 Title Test Passed\n");
         }else {
-            System.out.println("Product 01 Title Test Failed");
+            System.out.println("Product 01 Title Test Failed\n");
         }
 
-        Thread.sleep(3000);
+        Thread.sleep(2000);
+
 
         //Check Product 01 Description
-        System.out.println("Product 01 Description Test\n");
+        System.out.println("Product 01 Description Test");
 
         actualText = "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.";
-        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_container\"]/div/div[1]/div[2]/div[1]/div")).getText();
+        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[2]")).getText();
 
         //Print actual text
         System.out.println("Test Case 002 Product 02 Description Actual Text:"+ actualText);
 
         if (expectedText.equals(actualText)) {
-            System.out.println("Product 02 Description Test Passed");
+            System.out.println("Product 01 Description Test Passed\n");
         }else {
-            System.out.println("Product 02 Description Test Failed");
+            System.out.println("Product 01 Description Test Failed\n");
         }
 
-        Thread.sleep(3000);
+        Thread.sleep(2000);
+
 
         //Check Product 01 Price
-        System.out.println("Product 01 Price Test\n");
+        System.out.println("Product 01 Price Test");
 
         actualText = "$29.99";
-        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_container\"]/div/div[1]/div[2]/div[2]/div")).getText();
+        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[3]")).getText();
 
         //Print actual text
         System.out.println("Test Case 002 Product 01 Price Actual Text:"+ actualText);
 
         if (expectedText.equals(actualText)) {
-            System.out.println("Product 01 Price Test Passed");
+            System.out.println("Product 01 Price Test Passed\n");
         }else {
-            System.out.println("Product 01 Price Test Failed");
+            System.out.println("Product 01 Price Test Failed\n");
         }
 
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
+
+        //Click back to products button
+        driver.findElement(By.xpath("//*[@id=\"back-to-products\"]")).click();
+
+        Thread.sleep(2000);
+
+
+
+
+        //------------------------------ Product 2: Sauce Labs Bike Light ----------------------------------//
+
+        //--------------Check Product 02 Details----------------//
+        System.out.println("Verify the Product 02 details\n");
+
+        //Clicked the card product title
+        driver.findElement(By.xpath("//*[@id=\"item_0_title_link\"]/div")).click();
+
+        //Check Product 02 title
+        System.out.println("Product 02 Title Test");
+
+        actualText = "Sauce Labs Bike Light";
+        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[1]")).getText();
+
+        //Print actual text
+        System.out.println("Test Case 002 Product 02 Title Actual Text:"+ actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Product 02 Title Test Passed\n");
+        }else {
+            System.out.println("Product 02 Title Test Failed\n");
+        }
+
+        Thread.sleep(2000);
+
+
+        //Check Product 01 Description
+        System.out.println("Product 02 Description Test");
+
+        actualText = "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.";
+        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[2]")).getText();
+
+        //Print actual text
+        System.out.println("Test Case 002 Product 02 Description Actual Text:"+ actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Product 02 Description Test Passed\n");
+        }else {
+            System.out.println("Product 02 Description Test Failed\n");
+        }
+
+        Thread.sleep(2000);
+
+
+        //Check Product 01 Price
+        System.out.println("Product 02 Price Test");
+
+        actualText = "$9.99";
+        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[3]")).getText();
+
+        //Print actual text
+        System.out.println("Test Case 002 Product 01 Price Actual Text:"+ actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Product 02 Price Test Passed\n");
+        }else {
+            System.out.println("Product 02 Price Test Failed\n");
+        }
+
+        Thread.sleep(2000);
+
+
+        //Click back to products button
+        driver.findElement(By.xpath("//*[@id=\"back-to-products\"]")).click();
+
+        Thread.sleep(2000);
 
 
 
