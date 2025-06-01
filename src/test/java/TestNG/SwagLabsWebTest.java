@@ -24,7 +24,7 @@ public class SwagLabsWebTest {
 
     }
 
-    //Test Case Section
+    /*--------------------Test Case Section-----------------------------*/
 
     //Test Case : 001
     @Test(priority = 1)
@@ -61,6 +61,78 @@ public class SwagLabsWebTest {
     }
 
 
+    //Test Case - Product details Test (TC: 002)
+    @Test(priority = 2)
+    public void productDetails() throws InterruptedException {
+
+        System.out.println("================================= Test 002 ============================================\n");
+        System.out.println("PRODUCT DETAILS TEST CASE\n");
+
+        //------------------------------ Product 1: Sauce Labs Backpack----------------------------------//
+
+        //--------------Check Product 01 Details----------------//
+        System.out.println("Verify the Product 01 details\n");
+
+        //Check Product 01 title
+        System.out.println("Product 01 Title Test\n");
+
+        actualText = "Sauce Labs Backpack";
+        expectedText = driver.findElement(By.xpath("//*[@id=\"item_4_title_link\"]/div")).getText();
+
+        //Print actual text
+        System.out.println("Test Case 002 Product 01 Title Actual Text:"+ actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Product 01 Title Test Passed");
+        }else {
+            System.out.println("Product 01 Title Test Failed");
+        }
+
+        Thread.sleep(3000);
+
+        //Check Product 01 Description
+        System.out.println("Product 01 Description Test\n");
+
+        actualText = "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.";
+        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_container\"]/div/div[1]/div[2]/div[1]/div")).getText();
+
+        //Print actual text
+        System.out.println("Test Case 002 Product 02 Description Actual Text:"+ actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Product 02 Description Test Passed");
+        }else {
+            System.out.println("Product 02 Description Test Failed");
+        }
+
+        Thread.sleep(3000);
+
+        //Check Product 01 Price
+        System.out.println("Product 01 Price Test\n");
+
+        actualText = "$29.99";
+        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_container\"]/div/div[1]/div[2]/div[2]/div")).getText();
+
+        //Print actual text
+        System.out.println("Test Case 002 Product 01 Price Actual Text:"+ actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Product 01 Price Test Passed");
+        }else {
+            System.out.println("Product 01 Price Test Failed");
+        }
+
+        Thread.sleep(3000);
+
+
+
+
+
+
+
+
+    }
+
 
 
 
@@ -79,6 +151,8 @@ public class SwagLabsWebTest {
 
 
     //Supportive methods
+
+    /*----------------- login user supportive method ------------------------*/
     public void userLogin() throws InterruptedException {
 
         driver.get(BaseURL);
@@ -96,6 +170,22 @@ public class SwagLabsWebTest {
         driver.findElement(By.xpath("//*[@id=\"login-button\"]")).click();
         Thread.sleep(3000);
     }
+
+//    /*------------------ add to card button supportive method -----------------------*/
+//    public void addToCardButtonClick() throws InterruptedException {
+//
+//        //Click add to card button
+//        driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-backpack\"]")).click();
+//
+//        Thread.sleep(2000);
+//    }
+
+
+
+
+
+
+
 
 
 
