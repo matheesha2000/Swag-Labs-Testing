@@ -137,6 +137,8 @@ public class SwagLabsWebTest {
 
         Thread.sleep(2000);
 
+        System.out.println("------------------------------------------------\n");
+
 
 
 
@@ -166,7 +168,7 @@ public class SwagLabsWebTest {
         Thread.sleep(2000);
 
 
-        //Check Product 01 Description
+        //Check Product 02 Description
         System.out.println("Product 02 Description Test");
 
         actualText = "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.";
@@ -184,14 +186,14 @@ public class SwagLabsWebTest {
         Thread.sleep(2000);
 
 
-        //Check Product 01 Price
+        //Check Product 02 Price
         System.out.println("Product 02 Price Test");
 
         actualText = "$9.99";
         expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[3]")).getText();
 
         //Print actual text
-        System.out.println("Test Case 002 Product 01 Price Actual Text:"+ actualText);
+        System.out.println("Test Case 002 Product 02 Price Actual Text:"+ actualText);
 
         if (expectedText.equals(actualText)) {
             System.out.println("Product 02 Price Test Passed\n");
@@ -206,6 +208,78 @@ public class SwagLabsWebTest {
         driver.findElement(By.xpath("//*[@id=\"back-to-products\"]")).click();
 
         Thread.sleep(2000);
+
+        System.out.println("------------------------------------------------\n");
+
+
+        //------------------------------ Product 3: Sauce Labs Bolt T-Shirt ----------------------------------//
+
+        //--------------Check Product 03 Details----------------//
+        System.out.println("Verify the Product 03 details\n");
+
+        //Clicked the card product title
+        driver.findElement(By.xpath("//*[@id=\"item_1_title_link\"]/div")).click();
+
+        //Check Product 02 title
+        System.out.println("Product 03 Title Test");
+
+        actualText = "Sauce Labs Bolt T-Shirt";
+        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[1]")).getText();
+
+        //Print actual text
+        System.out.println("Test Case 002 Product 03 Title Actual Text:"+ actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Product 03 Title Test Passed\n");
+        }else {
+            System.out.println("Product 03 Title Test Failed\n");
+        }
+
+        Thread.sleep(2000);
+
+
+        //Check Product 03 Description
+        System.out.println("Product 03 Description Test");
+
+        actualText = "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.";
+        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[2]")).getText();
+
+        //Print actual text
+        System.out.println("Test Case 002 Product 03 Description Actual Text:"+ actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Product 03 Description Test Passed\n");
+        }else {
+            System.out.println("Product 03 Description Test Failed\n");
+        }
+
+        Thread.sleep(2000);
+
+
+        //Check Product 03 Price
+        System.out.println("Product 03 Price Test");
+
+        actualText = "$15.99";
+        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[3]")).getText();
+
+        //Print actual text
+        System.out.println("Test Case 002 Product 03 Price Actual Text:"+ actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Product 03 Price Test Passed\n");
+        }else {
+            System.out.println("Product 03 Price Test Failed\n");
+        }
+
+        Thread.sleep(2000);
+
+
+        //Click back to products button
+        driver.findElement(By.xpath("//*[@id=\"back-to-products\"]")).click();
+
+        Thread.sleep(2000);
+
+        System.out.println("------------------------------------------------\n");
 
 
 
