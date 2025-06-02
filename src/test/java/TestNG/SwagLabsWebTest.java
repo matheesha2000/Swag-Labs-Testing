@@ -2,6 +2,7 @@ package TestNG;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -42,7 +43,7 @@ public class SwagLabsWebTest {
         actualText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).getText();
 
         //print actual text
-        System.out.println("Test Case 001 Actual Text:"+ actualText);
+        System.out.println("Test Case 001 Actual Text: "+ actualText);
 
         if (expectedText.equals(actualText)) {
 
@@ -85,11 +86,11 @@ public class SwagLabsWebTest {
         expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[1]")).getText();
 
         //Print actual text
-        System.out.println("Test Case 002 Product 01 Title Actual Text:"+ actualText);
+        System.out.println("Test Case 002 Product 01 Title Actual Text: " + actualText);
 
         if (expectedText.equals(actualText)) {
             System.out.println("Product 01 Title Test Passed\n");
-        }else {
+        } else {
             System.out.println("Product 01 Title Test Failed\n");
         }
 
@@ -103,11 +104,11 @@ public class SwagLabsWebTest {
         expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[2]")).getText();
 
         //Print actual text
-        System.out.println("Test Case 002 Product 02 Description Actual Text:"+ actualText);
+        System.out.println("Test Case 002 Product 02 Description Actual Text: " + actualText);
 
         if (expectedText.equals(actualText)) {
             System.out.println("Product 01 Description Test Passed\n");
-        }else {
+        } else {
             System.out.println("Product 01 Description Test Failed\n");
         }
 
@@ -121,11 +122,11 @@ public class SwagLabsWebTest {
         expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[3]")).getText();
 
         //Print actual text
-        System.out.println("Test Case 002 Product 01 Price Actual Text:"+ actualText);
+        System.out.println("Test Case 002 Product 01 Price Actual Text: " + actualText);
 
         if (expectedText.equals(actualText)) {
             System.out.println("Product 01 Price Test Passed\n");
-        }else {
+        } else {
             System.out.println("Product 01 Price Test Failed\n");
         }
 
@@ -138,8 +139,6 @@ public class SwagLabsWebTest {
         Thread.sleep(2000);
 
         System.out.println("------------------------------------------------\n");
-
-
 
 
         //------------------------------ Product 2: Sauce Labs Bike Light ----------------------------------//
@@ -157,11 +156,11 @@ public class SwagLabsWebTest {
         expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[1]")).getText();
 
         //Print actual text
-        System.out.println("Test Case 002 Product 02 Title Actual Text:"+ actualText);
+        System.out.println("Test Case 002 Product 02 Title Actual Text: " + actualText);
 
         if (expectedText.equals(actualText)) {
             System.out.println("Product 02 Title Test Passed\n");
-        }else {
+        } else {
             System.out.println("Product 02 Title Test Failed\n");
         }
 
@@ -175,11 +174,11 @@ public class SwagLabsWebTest {
         expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[2]")).getText();
 
         //Print actual text
-        System.out.println("Test Case 002 Product 02 Description Actual Text:"+ actualText);
+        System.out.println("Test Case 002 Product 02 Description Actual Text: " + actualText);
 
         if (expectedText.equals(actualText)) {
             System.out.println("Product 02 Description Test Passed\n");
-        }else {
+        } else {
             System.out.println("Product 02 Description Test Failed\n");
         }
 
@@ -193,11 +192,11 @@ public class SwagLabsWebTest {
         expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[3]")).getText();
 
         //Print actual text
-        System.out.println("Test Case 002 Product 02 Price Actual Text:"+ actualText);
+        System.out.println("Test Case 002 Product 02 Price Actual Text:" + actualText);
 
         if (expectedText.equals(actualText)) {
             System.out.println("Product 02 Price Test Passed\n");
-        }else {
+        } else {
             System.out.println("Product 02 Price Test Failed\n");
         }
 
@@ -227,11 +226,11 @@ public class SwagLabsWebTest {
         expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[1]")).getText();
 
         //Print actual text
-        System.out.println("Test Case 002 Product 03 Title Actual Text:"+ actualText);
+        System.out.println("Test Case 002 Product 03 Title Actual Text: " + actualText);
 
         if (expectedText.equals(actualText)) {
             System.out.println("Product 03 Title Test Passed\n");
-        }else {
+        } else {
             System.out.println("Product 03 Title Test Failed\n");
         }
 
@@ -245,11 +244,11 @@ public class SwagLabsWebTest {
         expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[2]")).getText();
 
         //Print actual text
-        System.out.println("Test Case 002 Product 03 Description Actual Text:"+ actualText);
+        System.out.println("Test Case 002 Product 03 Description Actual Text: " + actualText);
 
         if (expectedText.equals(actualText)) {
             System.out.println("Product 03 Description Test Passed\n");
-        }else {
+        } else {
             System.out.println("Product 03 Description Test Failed\n");
         }
 
@@ -263,11 +262,11 @@ public class SwagLabsWebTest {
         expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[3]")).getText();
 
         //Print actual text
-        System.out.println("Test Case 002 Product 03 Price Actual Text:"+ actualText);
+        System.out.println("Test Case 002 Product 03 Price Actual Text: " + actualText);
 
         if (expectedText.equals(actualText)) {
             System.out.println("Product 03 Price Test Passed\n");
-        }else {
+        } else {
             System.out.println("Product 03 Price Test Failed\n");
         }
 
@@ -277,19 +276,65 @@ public class SwagLabsWebTest {
         //Click back to products button
         driver.findElement(By.xpath("//*[@id=\"back-to-products\"]")).click();
 
-        Thread.sleep(2000);
 
-        System.out.println("------------------------------------------------\n");
+        System.out.println("----------------------------------------------------------------------------------------\n");
 
-
-
-
-
+        Thread.sleep(3000);
 
 
     }
 
 
+    //Test Case - Product details Test (TC: 002)
+  @Test(priority = 3)
+  public void addToCartButton() throws InterruptedException {
+
+      System.out.println("================================= Test 003 ============================================\n");
+      System.out.println("ADD TO CART BUTTON TEST CASE\n");
+
+      //------------------------------ Product 1: Sauce Labs Backpack-------------------------------
+
+      System.out.println("Verify the Product 01 : Sauce Labs Backpack ");
+
+      //click the Product 1 add to cart button
+      driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-backpack\"]")).click();
+
+      actualText = "1";
+      expectedText = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span")).getText();
+
+      //Print actual text
+      System.out.println("Test Case 003 Product 01 Add to Cart Button Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: The Product 01 Successfully added to the Cart\n");
+      } else {
+          System.out.println("Failed: The Product 01 Can't added to the Cart\n");
+      }
+
+      Thread.sleep(2000);
+
+      //Click the Remove Button to Remove the add product 01
+      driver.findElement(By.xpath("//*[@id=\"remove-sauce-labs-backpack\"]")).click();
+
+      Thread.sleep(2000);
+
+      System.out.println("------------------------------------------------\n");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
 
 
 
@@ -327,14 +372,7 @@ public class SwagLabsWebTest {
         Thread.sleep(3000);
     }
 
-//    /*------------------ add to card button supportive method -----------------------*/
-//    public void addToCardButtonClick() throws InterruptedException {
-//
-//        //Click add to card button
-//        driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-backpack\"]")).click();
-//
-//        Thread.sleep(2000);
-//    }
+
 
 
 
