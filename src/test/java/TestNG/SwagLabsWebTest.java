@@ -436,41 +436,10 @@ public class SwagLabsWebTest {
       System.out.println("================================= Test 005 ============================================\n");
       System.out.println("SORTING DROPDOWN TEST CASE\n");
 
-
-      //------------------------- Shorting Dropdown 1 : (Z - A) ----------------------------//
-
-      System.out.println("Verify the (Z -A) Sorting Drop Down ");
-
-//      //click the dropdown icon button
-//      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select")).click();
-//      Thread.sleep(2000);
-
-      //select the (Z - A) dropdown shortlist
-      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[2]")).click();
-
-      expectedText = "Name (Z to A)";
-      actualText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[2]")).getText();
-
-      System.out.println("Test Case 005 Sorting Drop Down 2 Actual Text: " + actualText);
-
-      if (expectedText.equals(actualText)) {
-          System.out.println("Passed: Products are correctly Sorted (Z - A) order");
-      } else {
-          System.out.println("Failed: Products are not Sorted (Z - A) order");
-      }
-
-      Thread.sleep(2000);
-
-      System.out.println("------------------------------------------------\n");
+      //------------------------- Shorting Dropdown 1 : (A - Z) ----------------------------//
 
 
-      //------------------------- Shorting Dropdown 2 : (A - Z) ----------------------------//
-
-      System.out.println("Verify the (A -Z ) Sorting Drop Down ");
-
-//      //click the dropdown icon button
-//      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select")).click();
-//      Thread.sleep(2000);
+      System.out.println("Verify the (A - Z) Sorting Drop Down ");
 
       //select the (A - Z) dropdown shortlist
       driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[1]")).click();
@@ -491,23 +460,45 @@ public class SwagLabsWebTest {
       System.out.println("------------------------------------------------\n");
 
 
+      //------------------------- Shorting Dropdown 2 : (Z - A) ----------------------------//
+
+
+      System.out.println("Verify the (Z -A) Sorting Drop Down ");
+
+      //select the (Z - A) dropdown shortlist
+      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[2]")).click();
+
+      expectedText = "Name (Z to A)";
+      actualText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[2]")).getText();
+
+      System.out.println("Test Case 005 Sorting Drop Down 2 Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: Products are correctly Sorted (Z - A) order");
+      } else {
+          System.out.println("Failed: Products are not Sorted (Z - A) order");
+      }
+
+      Thread.sleep(2000);
+
+
+      System.out.println("------------------------------------------------\n");
+
 
 
       //------------------------- Shorting Dropdown 3 : (low - high) ----------------------------//
 
-      System.out.println("Verify the (low - high) Sorting Drop Down ");
 
-//      //click the dropdown icon button
-//      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select")).click();
-//      Thread.sleep(2000);
+
+      System.out.println("Verify the (low - high) Sorting Drop Down ");
 
       //select the (low - high) dropdown shortlist
       driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[3]")).click();
 
-      expectedText = "Name (low to high)";
+      expectedText = "Price (low to high)";
       actualText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[3]")).getText();
 
-      System.out.println("Test Case 005 Sorting Drop Down 2 Actual Text: " + actualText);
+      System.out.println("Test Case 005 Sorting Drop Down 3 Actual Text: " + actualText);
 
       if (expectedText.equals(actualText)) {
           System.out.println("Passed: Products are correctly Sorted (low - high) order");
@@ -517,12 +508,37 @@ public class SwagLabsWebTest {
 
       Thread.sleep(2000);
 
+
       System.out.println("------------------------------------------------\n");
 
 
 
+      //------------------------- Shorting Dropdown 4 : (high - low) ----------------------------//
+
+
+      System.out.println("Verify the (high - low) Sorting Drop Down ");
+
+      //select the (high - low) dropdown shortlist
+      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[4]")).click();
+
+      expectedText = "Price (high to low)";
+      actualText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[4]")).getText();
+
+      System.out.println("Test Case 005 Sorting Drop Down 4 Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: Products are correctly Sorted (high - low) order");
+      } else {
+          System.out.println("Failed: Products are not Sorted (high - low) order");
+      }
+
+      Thread.sleep(2000);
+
+      System.out.println("------------------------------------------------\n");
 
   }
+
+
 
 
 
@@ -558,6 +574,15 @@ public class SwagLabsWebTest {
         //Clicked the login button
         driver.findElement(By.xpath("//*[@id=\"login-button\"]")).click();
         Thread.sleep(3000);
+    }
+
+
+    /*---------------------------- Dropdown icon supportive method -----------------*/
+    public void dropdownIcon() throws InterruptedException {
+
+        //click the dropdown icon
+        driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select")).click();
+        Thread.sleep(1000);
     }
 
 
