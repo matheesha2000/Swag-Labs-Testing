@@ -285,7 +285,7 @@ public class SwagLabsWebTest {
     }
 
 
-    //Test Case - Product details Test (TC: 002)
+    //Test Case - Add To Cart Button Test (TC: 003)
   @Test(priority = 3)
   public void addToCartButton() throws InterruptedException {
 
@@ -378,24 +378,64 @@ public class SwagLabsWebTest {
 
       Thread.sleep(2000);
 
-      System.out.println("------------------------------------------------\n");
+      System.out.println("----------------------------------------------------------------------------------------\n");
+
+      Thread.sleep(3000);
+  }
+
+    //Test Case - Multiple Add To Cart Buttons Test (TC: 004)
+  @Test(priority = 4)
+  public void multipleAddToCartButtons() throws InterruptedException {
+
+      System.out.println("================================= Test 004 ============================================\n");
+      System.out.println("MULTIPLE ADD TO CART BUTTONS TEST CASE\n");
+
+      System.out.println("Verify the Multiple Add To Cart Buttons");
+
+      //click product 1 add to cart button
+      driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-backpack\"]")).click();
+      Thread.sleep(1000);
+
+      //click product 2 add to cart button
+      driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-bike-light\"]")).click();
+      Thread.sleep(1000);
+
+      //click product 3 add to cart button
+      driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-bolt-t-shirt\"]")).click();
+      Thread.sleep(1000);
 
 
 
+      actualText = "3";
+      expectedText = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span")).getText();
 
+      //Print actual text
+      System.out.println("Test Case 004 Multiple Add to Cart Buttons Actual Text: " + actualText);
 
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: Multiple Products Successfully added to the Cart\n");
+      } else {
+          System.out.println("Failed: Multiple Products UnSuccessfully added to the Cart\n");
+      }
 
+      Thread.sleep(3000);
 
+      //Click the Remove Button to Remove the add product 03
+      driver.findElement(By.xpath("//*[@id=\"remove-sauce-labs-bolt-t-shirt\"]")).click();
+      Thread.sleep(1000);
 
+      //Click the Remove Button to Remove the add product 02
+      driver.findElement(By.xpath("//*[@id=\"remove-sauce-labs-bike-light\"]")).click();
+      Thread.sleep(1000);
 
+      //Click the Remove Button to Remove the add product 01
+      driver.findElement(By.xpath("//*[@id=\"remove-sauce-labs-backpack\"]")).click();
 
+      Thread.sleep(1000);
 
+      System.out.println("----------------------------------------------------------------------------------------\n");
 
-
-
-
-
-
+      Thread.sleep(3000);
 
 
   }
