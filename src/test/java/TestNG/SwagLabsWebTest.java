@@ -322,6 +322,70 @@ public class SwagLabsWebTest {
 
 
 
+      //------------------------------ Product 2: Sauce Labs Bike Light-------------------------------
+
+      System.out.println("Verify the Product 02 : Sauce Labs Bike Light ");
+
+      //click the Product 2 add to cart button
+      driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-bike-light\"]")).click();
+
+      actualText = "1";
+      expectedText = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span")).getText();
+
+      //Print actual text
+      System.out.println("Test Case 003 Product 02 Add to Cart Button Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: The Product 02 Successfully added to the Cart\n");
+      } else {
+          System.out.println("Failed: The Product 02 Can't added to the Cart\n");
+      }
+
+      Thread.sleep(2000);
+
+      //Click the Remove Button to Remove the add product 02
+      driver.findElement(By.xpath("//*[@id=\"remove-sauce-labs-bike-light\"]")).click();
+
+      Thread.sleep(2000);
+
+      System.out.println("------------------------------------------------\n");
+
+
+
+      //------------------------------ Product 3: Sauce Labs Bolt T-Shirt-------------------------------
+
+      System.out.println("Verify the Product 03 : Sauce Labs Bolt T-Shirt ");
+
+      //click the Product 3 add to cart button
+      driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-bolt-t-shirt\"]")).click();
+
+      actualText = "1";
+      expectedText = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span")).getText();
+
+      //Print actual text
+      System.out.println("Test Case 003 Product 03 Add to Cart Button Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: The Product 03 Successfully added to the Cart\n");
+      } else {
+          System.out.println("Failed: The Product 03 Can't added to the Cart\n");
+      }
+
+      Thread.sleep(2000);
+
+      //Click the Remove Button to Remove the add product 03
+      driver.findElement(By.xpath("//*[@id=\"remove-sauce-labs-bolt-t-shirt\"]")).click();
+
+      Thread.sleep(2000);
+
+      System.out.println("------------------------------------------------\n");
+
+
+
+
+
+
+
 
 
 
