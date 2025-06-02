@@ -437,6 +437,43 @@ public class SwagLabsWebTest {
 
       Thread.sleep(3000);
 
+  }
+
+
+    //Test Case - Sorting Dropdown Test (TC: 005)
+  @Test(priority = 5)
+  public void sortingDropDown() throws InterruptedException {
+
+      System.out.println("================================= Test 005 ============================================\n");
+      System.out.println("SORTING DROPDOWN TEST CASE\n");
+
+      //------------------------- Shorting Dropdown 1 : (A - Z) ----------------------------//
+
+      System.out.println("Verify the (A -Z ) Sorting Drop Down ");
+
+      //click the dropdown icon button
+      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select")).click();
+      Thread.sleep(2000);
+
+      //select the (A - Z) dropdown shortlist
+      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]")).click();
+
+      actualText = "Name (A to Z)";
+      expectedText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]")).getText();
+
+      System.out.println("Test Case 005 Sorting Drop Down 1 Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: Products are correctly Sorted (A - Z) order");
+      } else {
+          System.out.println("Failed: Products are not Sorted (A - Z) order");
+      }
+
+      Thread.sleep(2000);
+
+      System.out.println("------------------------------------------------\n");
+
+
 
   }
 
