@@ -82,8 +82,8 @@ public class SwagLabsWebTest {
         //Check Product 01 title
         System.out.println("Product 01 Title Test");
 
-        actualText = "Sauce Labs Backpack";
-        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[1]")).getText();
+        expectedText = "Sauce Labs Backpack";
+        actualText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[1]")).getText();
 
         //Print actual text
         System.out.println("Test Case 002 Product 01 Title Actual Text: " + actualText);
@@ -100,8 +100,8 @@ public class SwagLabsWebTest {
         //Check Product 01 Description
         System.out.println("Product 01 Description Test");
 
-        actualText = "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.";
-        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[2]")).getText();
+        expectedText = "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.";
+        actualText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[2]")).getText();
 
         //Print actual text
         System.out.println("Test Case 002 Product 02 Description Actual Text: " + actualText);
@@ -118,8 +118,8 @@ public class SwagLabsWebTest {
         //Check Product 01 Price
         System.out.println("Product 01 Price Test");
 
-        actualText = "$29.99";
-        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[3]")).getText();
+        expectedText = "$29.99";
+        actualText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[3]")).getText();
 
         //Print actual text
         System.out.println("Test Case 002 Product 01 Price Actual Text: " + actualText);
@@ -152,8 +152,8 @@ public class SwagLabsWebTest {
         //Check Product 02 title
         System.out.println("Product 02 Title Test");
 
-        actualText = "Sauce Labs Bike Light";
-        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[1]")).getText();
+        expectedText = "Sauce Labs Bike Light";
+        actualText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[1]")).getText();
 
         //Print actual text
         System.out.println("Test Case 002 Product 02 Title Actual Text: " + actualText);
@@ -170,8 +170,8 @@ public class SwagLabsWebTest {
         //Check Product 02 Description
         System.out.println("Product 02 Description Test");
 
-        actualText = "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.";
-        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[2]")).getText();
+        expectedText = "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.";
+        actualText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[2]")).getText();
 
         //Print actual text
         System.out.println("Test Case 002 Product 02 Description Actual Text: " + actualText);
@@ -188,8 +188,8 @@ public class SwagLabsWebTest {
         //Check Product 02 Price
         System.out.println("Product 02 Price Test");
 
-        actualText = "$9.99";
-        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[3]")).getText();
+        expectedText = "$9.99";
+        actualText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[3]")).getText();
 
         //Print actual text
         System.out.println("Test Case 002 Product 02 Price Actual Text:" + actualText);
@@ -222,8 +222,8 @@ public class SwagLabsWebTest {
         //Check Product 02 title
         System.out.println("Product 03 Title Test");
 
-        actualText = "Sauce Labs Bolt T-Shirt";
-        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[1]")).getText();
+        expectedText = "Sauce Labs Bolt T-Shirt";
+        actualText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[1]")).getText();
 
         //Print actual text
         System.out.println("Test Case 002 Product 03 Title Actual Text: " + actualText);
@@ -240,8 +240,8 @@ public class SwagLabsWebTest {
         //Check Product 03 Description
         System.out.println("Product 03 Description Test");
 
-        actualText = "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.";
-        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[2]")).getText();
+        expectedText = "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.";
+        actualText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[2]")).getText();
 
         //Print actual text
         System.out.println("Test Case 002 Product 03 Description Actual Text: " + actualText);
@@ -258,8 +258,8 @@ public class SwagLabsWebTest {
         //Check Product 03 Price
         System.out.println("Product 03 Price Test");
 
-        actualText = "$15.99";
-        expectedText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[3]")).getText();
+        expectedText = "$15.99";
+        actualText = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[3]")).getText();
 
         //Print actual text
         System.out.println("Test Case 002 Product 03 Price Actual Text: " + actualText);
@@ -299,8 +299,8 @@ public class SwagLabsWebTest {
       //click the Product 1 add to cart button
       driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-backpack\"]")).click();
 
-      actualText = "1";
-      expectedText = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span")).getText();
+      expectedText = "1";
+      actualText = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span")).getText();
 
       //Print actual text
       System.out.println("Test Case 003 Product 01 Add to Cart Button Actual Text: " + actualText);
@@ -329,8 +329,8 @@ public class SwagLabsWebTest {
       //click the Product 2 add to cart button
       driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-bike-light\"]")).click();
 
-      actualText = "1";
-      expectedText = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span")).getText();
+      expectedText = "1";
+      actualText = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span")).getText();
 
       //Print actual text
       System.out.println("Test Case 003 Product 02 Add to Cart Button Actual Text: " + actualText);
@@ -359,8 +359,8 @@ public class SwagLabsWebTest {
       //click the Product 3 add to cart button
       driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-bolt-t-shirt\"]")).click();
 
-      actualText = "1";
-      expectedText = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span")).getText();
+      expectedText = "1";
+      actualText = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span")).getText();
 
       //Print actual text
       System.out.println("Test Case 003 Product 03 Add to Cart Button Actual Text: " + actualText);
@@ -406,8 +406,8 @@ public class SwagLabsWebTest {
 
 
 
-      actualText = "3";
-      expectedText = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span")).getText();
+      expectedText = "3";
+      actualText = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span")).getText();
 
       //Print actual text
       System.out.println("Test Case 004 Multiple Add to Cart Buttons Actual Text: " + actualText);
@@ -452,14 +452,14 @@ public class SwagLabsWebTest {
       System.out.println("Verify the (A -Z ) Sorting Drop Down ");
 
       //click the dropdown icon button
-      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select")).click();
+      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span")).click();
       Thread.sleep(2000);
 
       //select the (A - Z) dropdown shortlist
-      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]")).click();
+      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[1]")).click();
 
-      actualText = "Name (A to Z)";
-      expectedText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]")).getText();
+      expectedText = "Name (A to Z)";
+      actualText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[1]")).getText();
 
       System.out.println("Test Case 005 Sorting Drop Down 1 Actual Text: " + actualText);
 
@@ -472,6 +472,34 @@ public class SwagLabsWebTest {
       Thread.sleep(2000);
 
       System.out.println("------------------------------------------------\n");
+
+
+      //------------------------- Shorting Dropdown 2 : (Z - A) ----------------------------//
+
+      System.out.println("Verify the (Z -A) Sorting Drop Down ");
+
+      //click the dropdown icon button
+      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span")).click();
+      Thread.sleep(2000);
+
+      //select the (Z - A) dropdown shortlist
+      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[2]")).click();
+
+      expectedText = "Name (Z to A)";
+      actualText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[2]")).getText();
+
+      System.out.println("Test Case 005 Sorting Drop Down 2 Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: Products are correctly Sorted (Z - A) order");
+      } else {
+          System.out.println("Failed: Products are not Sorted (Z - A) order");
+      }
+
+      Thread.sleep(2000);
+
+      System.out.println("------------------------------------------------\n");
+
 
 
 
