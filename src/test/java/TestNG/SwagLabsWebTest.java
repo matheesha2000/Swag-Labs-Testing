@@ -74,6 +74,7 @@ public class SwagLabsWebTest {
         //------------------------------ Product 1: Sauce Labs Backpack ----------------------------------//
 
         //--------------Check Product 01 Details----------------//
+
         System.out.println("Verify the Product 01 details\n");
 
         //Clicked the card product title
@@ -534,7 +535,50 @@ public class SwagLabsWebTest {
 
       Thread.sleep(2000);
 
-      System.out.println("------------------------------------------------\n");
+      //select the (A - Z) dropdown shortlist
+      driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[1]")).click();
+
+      System.out.println("----------------------------------------------------------------------------------------\n");
+
+  }
+
+
+    //Test Case - Navigate To Cart Page (TC: 006)
+  @Test(priority = 6)
+  public void navigateToCart() throws InterruptedException {
+
+      System.out.println("================================= Test 006 ============================================\n");
+      System.out.println("NAVIGATE TO CART PAGE TEST CASE\n");
+
+      //click add to cart button product 1
+      driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-backpack\"]")).click();
+
+      //click add to cart button product 2
+      driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-bike-light\"]")).click();
+
+      Thread.sleep(2000);
+
+      //click cart navigate icon
+      driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a")).click();
+
+      //verify the cart page
+      expectedText = "Your Cart";
+      actualText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).getText();
+
+      //Print actual text
+      System.out.println("Test Case 006 Navigate to Cart Page Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("TC006: PASS");
+          System.out.println("Successfully Navigated to Cart Page");
+      } else {
+          System.out.println("TC006: FAIL");
+          System.out.println("Unsuccessfully navigated to Cart Page");
+      }
+
+      Thread.sleep(2000);
+
+      System.out.println("----------------------------------------------------------------------------------------\n");
 
   }
 
