@@ -584,6 +584,104 @@ public class SwagLabsWebTest {
 
 
 
+  @Test(priority = 7)
+  public void checkCards() throws InterruptedException {
+
+      System.out.println("================================= Test 007 ============================================\n");
+      System.out.println("CHECK CARDS TEST CASE\n");
+
+      //------------------------------ Card 1: Sauce Labs Backpack ----------------------------------//
+
+      //--------------Check Card 01 Details----------------//
+
+      System.out.println("Verify the Card 01 details\n");
+
+      //check card 01 quantity
+      System.out.println("Card 01 Quantity Test");
+
+      //Verify Item quantity
+      expectedText = "1";
+      actualText = driver.findElement(By.xpath("//*[@id=\"cart_contents_container\"]/div/div[1]/div[3]/div[1]")).getText();
+
+      //print actual text
+      System.out.println("Test Case 007 Card 01 Quantity Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: Valid Card 01 Item Quantity\n");
+      } else {
+          System.out.println("Failed: Invalid Card 01 Item Quantity\n");
+      }
+
+
+      //Check card 01 title
+      System.out.println("Card 01 Title Test");
+
+      //Verify Item title
+      expectedText = "Sauce Labs Backpack";
+      actualText = driver.findElement(By.xpath("//*[@id=\"item_4_title_link\"]/div")).getText();
+
+      //print actual text
+      System.out.println("Test Case 007 Card 01 Title Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: Valid Card 01 Item Title\n");
+      } else {
+          System.out.println("Failed: Invalid Card 01 Item Title\n");
+      }
+
+
+      //Check card 01 description
+      System.out.println("Card 01 Description Test");
+
+      //Verify Item title
+      expectedText = "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.";
+      actualText = driver.findElement(By.xpath("//*[@id=\"cart_contents_container\"]/div/div[1]/div[3]/div[2]/div[1]")).getText();
+
+      //print actual text
+      System.out.println("Test Case 007 Card 01 Description Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: Valid Card 01 Item Description\n");
+      } else {
+          System.out.println("Failed: Invalid Card 01 Item Description\n");
+      }
+
+
+      //Check card 01 Price
+      System.out.println("Card 01 Price Test");
+
+      //Verify Item Price
+      expectedText = "$29.99";
+      actualText = driver.findElement(By.xpath("//*[@id=\"cart_contents_container\"]/div/div[1]/div[3]/div[2]/div[2]/div")).getText();
+
+      //print actual text
+      System.out.println("Test Case 007 Card 01 Price Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: Valid Card 01 Item Price\n");
+      } else {
+          System.out.println("Failed: Invalid Card 01 Item Price\n");
+      }
+
+      System.out.println("------------------------------------------------\n");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+
+
+
 
 
 
