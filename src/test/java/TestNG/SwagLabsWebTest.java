@@ -667,15 +667,83 @@ public class SwagLabsWebTest {
 
 
 
+      //------------------------------ Card 2: Sauce Labs Bike Light ----------------------------------//
 
 
+      //--------------Check Card 01 Details----------------//
+
+      System.out.println("Verify the Card 02 details\n");
+
+      //check card 01 quantity
+      System.out.println("Card 02 Quantity Test");
+
+      //Verify Item quantity
+      expectedText = "1";
+      actualText = driver.findElement(By.xpath("//*[@id=\"cart_contents_container\"]/div/div[1]/div[4]/div[1]")).getText();
+
+      //print actual text
+      System.out.println("Test Case 007 Card 02 Quantity Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: Valid Card 02 Item Quantity\n");
+      } else {
+          System.out.println("Failed: Invalid Card 02 Item Quantity\n");
+      }
 
 
+      //Check card 02 title
+      System.out.println("Card 02 Title Test");
+
+      //Verify Item title
+      expectedText = "Sauce Labs Bike Light";
+      actualText = driver.findElement(By.xpath("//*[@id=\"item_0_title_link\"]/div")).getText();
+
+      //print actual text
+      System.out.println("Test Case 007 Card 02 Title Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: Valid Card 02 Item Title\n");
+      } else {
+          System.out.println("Failed: Invalid Card 02 Item Title\n");
+      }
 
 
+      //Check card 02 description
+      System.out.println("Card 02 Description Test");
+
+      //Verify Item title
+      expectedText = "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.";
+      actualText = driver.findElement(By.xpath("//*[@id=\"cart_contents_container\"]/div/div[1]/div[4]/div[2]/div[1]")).getText();
+
+      //print actual text
+      System.out.println("Test Case 007 Card 02 Description Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: Valid Card 02 Item Description\n");
+      } else {
+          System.out.println("Failed: Invalid Card 02 Item Description\n");
+      }
 
 
+      //Check card 02 Price
+      System.out.println("Card 02 Price Test");
 
+      //Verify Item Price
+      expectedText = "$9.99";
+      actualText = driver.findElement(By.xpath("//*[@id=\"cart_contents_container\"]/div/div[1]/div[4]/div[2]/div[2]/div")).getText();
+
+      //print actual text
+      System.out.println("Test Case 007 Card 02 Price Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("Passed: Valid Card 02 Item Price\n");
+      } else {
+          System.out.println("Failed: Invalid Card 02 Item Price\n");
+      }
+
+      System.out.println("------------------------------------------------\n");
+
+      Thread.sleep(2000);
 
 
   }
