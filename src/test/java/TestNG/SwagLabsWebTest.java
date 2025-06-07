@@ -556,8 +556,6 @@ public class SwagLabsWebTest {
       //click add to cart button product 2
       driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-bike-light\"]")).click();
 
-      Thread.sleep(2000);
-
       //click cart navigate icon
       driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a")).click();
 
@@ -583,7 +581,7 @@ public class SwagLabsWebTest {
   }
 
 
-
+    //Test Case - Check Cards (TC: 006)
   @Test(priority = 7)
   public void checkCards() throws InterruptedException {
 
@@ -665,6 +663,8 @@ public class SwagLabsWebTest {
 
       System.out.println("------------------------------------------------\n");
 
+      Thread.sleep(2000);
+
 
 
       //------------------------------ Card 2: Sauce Labs Bike Light ----------------------------------//
@@ -741,12 +741,91 @@ public class SwagLabsWebTest {
           System.out.println("Failed: Invalid Card 02 Item Price\n");
       }
 
-      System.out.println("------------------------------------------------\n");
+      System.out.println("----------------------------------------------------------------------------------------\n");
 
       Thread.sleep(2000);
 
 
   }
+
+
+    //Test Case - Load Product Page (TC: 006)
+  @Test(priority = 8)
+  public void loadCheckoutPage() throws InterruptedException {
+
+      System.out.println("================================= Test 008 ============================================\n");
+      System.out.println("LOAD CHECKOUT PAGE TEST CASE\n");
+
+      //click checkout button
+      driver.findElement(By.xpath("//*[@id=\"checkout\"]")).click();
+
+      //verify the checkout page
+      expectedText = "Checkout: Your Information";
+      actualText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).getText();
+
+      //Print actual text
+      System.out.println("Test Case 008 load to Checkout Page Actual Text: " + actualText);
+
+      if (expectedText.equals(actualText)) {
+          System.out.println("TC008: PASS");
+          System.out.println("Successfully load to Checkout Page");
+      } else {
+          System.out.println("TC008: FAIL");
+          System.out.println("Unsuccessfully load to Checkout Page");
+      }
+
+      Thread.sleep(2000);
+
+      System.out.println("----------------------------------------------------------------------------------------\n");
+
+
+  }
+
+
+    //Test Case - Load Product Page (TC: 006)
+    @Test(priority = 9)
+    public void loadCheckoutOverviewPage() throws InterruptedException {
+
+        System.out.println("================================= Test 009 ============================================\n");
+        System.out.println("LOAD CHECKOUT OVERVIEW PAGE TEST CASE\n");
+
+        //Enter First Name
+        driver.findElement(By.xpath("//*[@id=\"first-name\"]")).sendKeys("Matheesha");
+
+        //Enter Last Name
+        driver.findElement(By.xpath("//*[@id=\"last-name\"]")).sendKeys("Kalatuwawa");
+
+        //Enter Zip Code
+        driver.findElement(By.xpath("//*[@id=\"postal-code\"]")).sendKeys("60330");
+
+        Thread.sleep(1000);
+
+        //Click Continue Button
+        driver.findElement(By.xpath("//*[@id=\"continue\"]")).click();
+
+        //Verify Checkout Overview Page
+        expectedText = "Checkout: Overview";
+        actualText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).getText();
+
+        //Print Actual Text
+        System.out.println("Test Case 009 load to Checkout Overview Page Actual Text: " + actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("TC009: PASS");
+            System.out.println("Successfully load to Checkout Overview Page");
+        } else {
+            System.out.println("TC009: FAIL");
+            System.out.println("Unsuccessfully load to Checkout Overview Page");
+        }
+
+        Thread.sleep(2000);
+
+        System.out.println("----------------------------------------------------------------------------------------\n");
+
+
+    }
+
+
 
 
 
@@ -771,11 +850,10 @@ public class SwagLabsWebTest {
     public void userLogin() throws InterruptedException {
 
         driver.get(BaseURL);
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         //Identify the Username text and send value
         driver.findElement(By.name("user-name")).sendKeys("standard_user");
-        Thread.sleep(1000);
 
         //Identify the Password txt and send value
         driver.findElement(By.name("password")).sendKeys("secret_sauce");
@@ -783,7 +861,7 @@ public class SwagLabsWebTest {
 
         //Clicked the login button
         driver.findElement(By.xpath("//*[@id=\"login-button\"]")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 
 
