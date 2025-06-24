@@ -817,7 +817,7 @@ public class SwagLabsWebTest {
 
     }
 
-
+    //Test Case - Check Checkout Overview Page Cards (TC: 0010)
     @Test(priority = 10)
     public void checkCheckoutOverviewPageCards() throws InterruptedException {
 
@@ -983,7 +983,7 @@ public class SwagLabsWebTest {
 
     }
 
-
+    //Test Case - Check Information (TC: 0011)
     @Test(priority = 11)
     public void checkInformation() throws InterruptedException, IOException {
 
@@ -1007,6 +1007,10 @@ public class SwagLabsWebTest {
             System.out.println("Payment Information Test: FAIL\n");
 
         }
+
+
+        System.out.println("------------------------------------------------\n");
+
 
 
         System.out.println("----------Test Shipping Information--------\n");
@@ -1035,9 +1039,52 @@ public class SwagLabsWebTest {
 
         System.out.println("-----------------------------------------------------------------------------------------\n");
 
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
     }
+
+    //Test Case - Price Total Test (TC: 0012)
+    @Test(priority = 12)
+    public void priceTotalTest() throws InterruptedException, IOException {
+
+        System.out.println("================================= Test 0012 ============================================\n");
+        System.out.println("PRICE TOTAL TEST TEST CASE\n");
+
+        //Calculate the Total
+        double itemTotal = 39.98;
+        double tax = 3.20;
+        double total = itemTotal + tax;
+
+        //Final Total
+        System.out.println("Total : $" + total);
+
+        //Check total
+        expectedText = "Total: $43.18";
+        actualText = driver.findElement(By.xpath("//*[@id=\"checkout_summary_container\"]/div/div[2]/div[8]")).getText();
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Passed: Valid Checkout Price Total\n");
+            System.out.println("Total Price Calculation Successful ");
+            takeSnapShot(driver, "C:\\Users\\Dell\\Pictures\\Screenshots\\TotalPriceCalculationSuccess.png");
+            System.out.println("SnapShot Captured\n");
+
+        }
+        else {
+            System.out.println("Failed: Invalid Checkout Price Total\n");
+            System.out.println("Total Price Calculation UnSuccessful ");
+            takeSnapShot(driver, "C:\\Users\\Dell\\Pictures\\Screenshots\\TotalPriceCalculationSuccess.png");
+            System.out.println("SnapShot Captured\n");
+
+        }
+
+        System.out.println("-----------------------------------------------------------------------------------------\n");
+
+        Thread.sleep(2000);
+
+
+    }
+
+
 
 
 
