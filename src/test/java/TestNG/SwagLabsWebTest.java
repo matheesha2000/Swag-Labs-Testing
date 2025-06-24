@@ -581,7 +581,7 @@ public class SwagLabsWebTest {
   }
 
 
-    //Test Case - Check Cards (TC: 006)
+    //Test Case - Check Cards (TC: 007)
   @Test(priority = 7)
   public void checkCards() throws InterruptedException {
 
@@ -670,11 +670,11 @@ public class SwagLabsWebTest {
       //------------------------------ Card 2: Sauce Labs Bike Light ----------------------------------//
 
 
-      //--------------Check Card 01 Details----------------//
+      //--------------Check Card 02 Details----------------//
 
       System.out.println("Verify the Card 02 details\n");
 
-      //check card 01 quantity
+      //check card 02 quantity
       System.out.println("Card 02 Quantity Test");
 
       //Verify Item quantity
@@ -749,7 +749,7 @@ public class SwagLabsWebTest {
   }
 
 
-    //Test Case - Load Product Page (TC: 006)
+    //Test Case - Load Checkout Page (TC: 008)
   @Test(priority = 8)
   public void loadCheckoutPage() throws InterruptedException {
 
@@ -782,7 +782,7 @@ public class SwagLabsWebTest {
   }
 
 
-    //Test Case - Load Product Page (TC: 006)
+    //Test Case - Load Checkout Overview Page (TC: 009)
     @Test(priority = 9)
     public void loadCheckoutOverviewPage() throws InterruptedException {
 
@@ -820,10 +820,185 @@ public class SwagLabsWebTest {
 
         Thread.sleep(2000);
 
+
         System.out.println("----------------------------------------------------------------------------------------\n");
 
 
     }
+
+
+    @Test(priority = 10)
+    public void checkCheckoutOverviewPageCards() throws InterruptedException {
+
+        System.out.println("================================= Test 0010 ============================================\n");
+        System.out.println("CHECK CHECKOUT OVERVIEW PAGE CARDS TEST CASE\n");
+
+        //--------------------------- Verify Checkout Overview Page Card Details ------------------------------//
+
+
+        //------------------------------ Card 1: Sauce Labs Backpack ----------------------------------//
+
+        //--------------Check Card 01 Details----------------//
+
+        System.out.println("Verify the Card 01 details\n");
+
+        //check card 01 quantity
+        System.out.println("Card 01 Quantity Test");
+
+        //Verify Item quantity
+        expectedText = "1";
+        actualText = driver.findElement(By.xpath("//*[@id=\"checkout_summary_container\"]/div/div[1]/div[3]/div[1]")).getText();
+
+        //print actual text
+        System.out.println("Test Case 0010 Checkout Overview Page Card 01 Quantity Actual Text: " + actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Passed: Valid Checkout Overview Page Card 01 Item Quantity\n");
+        } else {
+            System.out.println("Failed: Invalid Checkout Overview Page Card 01 Item Quantity\n");
+        }
+
+
+        //Check card 01 title
+        System.out.println("Card 01 Title Test");
+
+        //Verify Item title
+        expectedText = "Sauce Labs Backpack";
+        actualText = driver.findElement(By.xpath("//*[@id=\"item_4_title_link\"]/div")).getText();
+
+        //print actual text
+        System.out.println("Test Case 0010 Checkout Overview Page Card 01 Title Actual Text: " + actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Passed: Valid Checkout Overview Page Card 01 Item Title\n");
+        } else {
+            System.out.println("Failed: Invalid Checkout Overview Page Card 01 Item Title\n");
+        }
+
+
+        //Check card 01 description
+        System.out.println("Card 01 Description Test");
+
+        //Verify Item title
+        expectedText = "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.";
+        actualText = driver.findElement(By.xpath("//*[@id=\"checkout_summary_container\"]/div/div[1]/div[3]/div[2]/div[1]")).getText();
+
+        //print actual text
+        System.out.println("Test Case 0010 Checkout Overview Page Card 01 Description Actual Text: " + actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Passed: Valid Checkout Overview Page Card 01 Item Description\n");
+        } else {
+            System.out.println("Failed: Invalid Checkout Overview Page Card 01 Item Description\n");
+        }
+
+
+        //Check card 01 Price
+        System.out.println("Card 01 Price Test");
+
+        //Verify Item Price
+        expectedText = "$29.99";
+        actualText = driver.findElement(By.xpath("//*[@id=\"checkout_summary_container\"]/div/div[1]/div[3]/div[2]/div[2]/div")).getText();
+
+        //print actual text
+        System.out.println("Test Case 0010 Checkout Overview Page Card 01 Price Actual Text: " + actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Passed: Valid Checkout Overview Page Card 01 Item Price\n");
+        } else {
+            System.out.println("Failed: Invalid Checkout Overview Page Card 01 Item Price\n");
+        }
+
+        System.out.println("------------------------------------------------\n");
+
+
+
+        //------------------------------ Card 2: Sauce Labs Bike Light ----------------------------------//
+
+
+        //--------------Check Card 02 Details----------------//
+
+        System.out.println("Verify the Card 02 details\n");
+
+        //check card 02 quantity
+        System.out.println("Card 02 Quantity Test");
+
+        //Verify Item quantity
+        expectedText = "1";
+        actualText = driver.findElement(By.xpath("//*[@id=\"checkout_summary_container\"]/div/div[1]/div[4]/div[1]")).getText();
+
+        //print actual text
+        System.out.println("Test Case 0010 Checkout Overview Page Card 02 Quantity Actual Text: " + actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Passed: Valid Checkout Overview Page Card 02 Item Quantity\n");
+        } else {
+            System.out.println("Failed: Invalid Checkout Overview Page Card 02 Item Quantity\n");
+        }
+
+
+        //Check card 02 title
+        System.out.println("Card 02 Title Test");
+
+        //Verify Item title
+        expectedText = "Sauce Labs Bike Light";
+        actualText = driver.findElement(By.xpath("//*[@id=\"item_0_title_link\"]/div")).getText();
+
+        //print actual text
+        System.out.println("Test Case 0010 Checkout Overview Page Card 02 Title Actual Text: " + actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Passed: Valid Checkout Overview Page Card 02 Item Title\n");
+        } else {
+            System.out.println("Failed: Invalid Checkout Overview Page Card 02 Item Title\n");
+        }
+
+
+        //Check card 02 description
+        System.out.println("Card 02 Description Test");
+
+        //Verify Item title
+        expectedText = "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.";
+        actualText = driver.findElement(By.xpath("//*[@id=\"checkout_summary_container\"]/div/div[1]/div[4]/div[2]/div[1]")).getText();
+
+        //print actual text
+        System.out.println("Test Case 0010 Checkout Overview Page Card 02 Description Actual Text: " + actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Passed: Valid Checkout Overview Page Card 02 Item Description\n");
+        } else {
+            System.out.println("Failed: Invalid Checkout Overview Page Card 02 Item Description\n");
+        }
+
+
+        //Check card 02 Price
+        System.out.println("Card 02 Price Test");
+
+        //Verify Item Price
+        expectedText = "$9.99";
+        actualText = driver.findElement(By.xpath("//*[@id=\"checkout_summary_container\"]/div/div[1]/div[4]/div[2]/div[2]/div")).getText();
+
+        //print actual text
+        System.out.println("Test Case 0010 Checkout Overview Page Card 02 Price Actual Text: " + actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("Passed: Valid Checkout Overview Page Card 02 Item Price\n");
+        } else {
+            System.out.println("Failed: Invalid Checkout Overview Page Card 02 Item Price\n");
+        }
+
+        System.out.println("----------------------------------------------------------------------------------------\n");
+
+        Thread.sleep(2000);
+
+
+
+    }
+
+
+
+
+
 
 
 
