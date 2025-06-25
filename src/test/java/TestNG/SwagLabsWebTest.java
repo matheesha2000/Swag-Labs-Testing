@@ -1086,6 +1086,52 @@ public class SwagLabsWebTest {
 
 
 
+    //Test Case - Load Complete Page Test (TC: 0012)
+    @Test(priority = 13)
+    public void loadCompletePage() throws InterruptedException, IOException {
+
+        System.out.println("================================= Test 0013 ============================================\n");
+        System.out.println("LOAD COMPLETE PAGE TEST CASE\n");
+
+        //click finish button
+        driver.findElement(By.xpath("//*[@id=\"finish\"]")).click();
+
+        //verify the complete page
+        expectedText = "Checkout: Complete!";
+        actualText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).getText();
+
+        //Print actual text
+        System.out.println("Test Case 0013 load to Complete Page Actual Text: " + actualText);
+
+        if (expectedText.equals(actualText)) {
+            System.out.println("TC0013: PASS");
+            System.out.println("Successfully load to Complete Page");
+        } else {
+            System.out.println("TC0013: FAIL");
+            System.out.println("Unsuccessfully load to Complete Page");
+        }
+
+        Thread.sleep(2000);
+
+        System.out.println("----------------------------------------------------------------------------------------\n");
+
+    }
+
+
+    @Test(priority = 14)
+    public void thankYouMessageTest() throws InterruptedException, IOException {
+
+        System.out.println("================================= Test 0014 ============================================\n");
+        System.out.println("THANK YOU MESSAGE TEST CASE\n");
+
+
+    }
+
+
+
+
+
+
 
 
 
