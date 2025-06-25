@@ -1026,28 +1026,32 @@ public class SwagLabsWebTest {
             System.out.println("Shipping Information Test: PASS");
             System.out.println("Free Pony Express Delivery! is Under the value of Shipping Information Success ");
             System.out.println("Information Test: PASS");
-            takeSnapShot(driver, "C:\\Users\\Dell\\Pictures\\Screenshots\\InformationSuccess.png");
-            System.out.println("SnapShot Captured\n");
 
         } else {
 
             System.out.println("Shipping Information Test: FAIL");
             System.out.println("Information Test: FAIL");
-            takeSnapShot(driver, "C:\\Users\\Dell\\Pictures\\Screenshots\\InformationSuccess.png");
-            System.out.println("SnapShot Captured\n");
         }
 
-        System.out.println("-----------------------------------------------------------------------------------------\n");
+        //Capture the Screenshot
+        takeSnapShot(driver, "C:\\Users\\Dell\\Pictures\\Screenshots\\InformationSuccess.png");
+        System.out.println("SnapShot Captured\n");
 
         Thread.sleep(2000);
 
+
+        System.out.println("-----------------------------------------------------------------------------------------\n");
+
+
     }
+
+
 
     //Test Case - Price Total Test (TC: 0012)
     @Test(priority = 12)
     public void priceTotalTest() throws InterruptedException, IOException {
 
-        System.out.println("================================= Test 0012 ============================================\n");
+        System.out.println("================================= Test 012 ============================================\n");
         System.out.println("PRICE TOTAL TEST TEST CASE\n");
 
         //Calculate the Total
@@ -1065,32 +1069,34 @@ public class SwagLabsWebTest {
         if (expectedText.equals(actualText)) {
             System.out.println("Passed: Valid Checkout Price Total\n");
             System.out.println("Total Price Calculation Successful ");
-            takeSnapShot(driver, "C:\\Users\\Dell\\Pictures\\Screenshots\\TotalPriceCalculationSuccess.png");
-            System.out.println("SnapShot Captured\n");
 
         }
         else {
             System.out.println("Failed: Invalid Checkout Price Total\n");
             System.out.println("Total Price Calculation UnSuccessful ");
-            takeSnapShot(driver, "C:\\Users\\Dell\\Pictures\\Screenshots\\TotalPriceCalculationSuccess.png");
-            System.out.println("SnapShot Captured\n");
 
         }
 
-        System.out.println("-----------------------------------------------------------------------------------------\n");
+        //Capture the screenshot
+        takeSnapShot(driver, "C:\\Users\\Dell\\Pictures\\Screenshots\\TotalPriceCalculationSuccess.png");
+        System.out.println("SnapShot Captured\n");
+
 
         Thread.sleep(2000);
+
+
+        System.out.println("-----------------------------------------------------------------------------------------\n");
 
 
     }
 
 
 
-    //Test Case - Load Complete Page Test (TC: 0012)
+    //Test Case - Load Complete Page Test (TC: 0013)
     @Test(priority = 13)
     public void loadCompletePage() throws InterruptedException, IOException {
 
-        System.out.println("================================= Test 0013 ============================================\n");
+        System.out.println("================================= Test 013 ============================================\n");
         System.out.println("LOAD COMPLETE PAGE TEST CASE\n");
 
         //click finish button
@@ -1101,13 +1107,13 @@ public class SwagLabsWebTest {
         actualText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).getText();
 
         //Print actual text
-        System.out.println("Test Case 0013 load to Complete Page Actual Text: " + actualText);
+        System.out.println("Test Case 013 load to Complete Page Actual Text: " + actualText);
 
         if (expectedText.equals(actualText)) {
-            System.out.println("TC0013: PASS");
+            System.out.println("TC013: PASS");
             System.out.println("Successfully load to Complete Page");
         } else {
-            System.out.println("TC0013: FAIL");
+            System.out.println("TC013: FAIL");
             System.out.println("Unsuccessfully load to Complete Page");
         }
 
@@ -1118,14 +1124,45 @@ public class SwagLabsWebTest {
     }
 
 
+    //Test Case - ThankYou Message Test (TC: 0014)
     @Test(priority = 14)
     public void thankYouMessageTest() throws InterruptedException, IOException {
 
-        System.out.println("================================= Test 0014 ============================================\n");
+        System.out.println("================================= Test 014 ============================================\n");
         System.out.println("THANK YOU MESSAGE TEST CASE\n");
+
+        //Check The ThankYou Text
+        expectedText = "Thank you for your order!";
+        actualText = driver.findElement(By.xpath("//*[@id=\"checkout_complete_container\"]/h2")).getText();
+
+        //Print actual text
+        System.out.println("Test Case 014 Thank you Page Actual Text:"+ actualText);
+
+        if (expectedText.equals(actualText)){
+            System.out.println("Thank you Text : PASS");
+            System.out.println("Your Order Placed Successfully");
+        }
+        else {
+            System.out.println("Thank You Text : FAIL");
+            System.out.println("Your Order Placing Fail");
+        }
+
+        //capture the screenshot
+        takeSnapShot(driver, "C:\\Users\\Dell\\Pictures\\Screenshots\\thankYouPageTestSuccess.png");
+        System.out.println("SnapShot Captured\n");
+
+
+        System.out.println("-----------------------------------------------------------------------------------------\n");
+
+        Thread.sleep(3000);
 
 
     }
+
+
+
+
+
 
 
 
