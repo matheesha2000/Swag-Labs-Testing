@@ -1185,11 +1185,20 @@ public class SwagLabsWebTest {
         }
 
 
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
 
         System.out.println("----------------------------------------------------------------------------------------\n");
 
+
+    }
+
+
+    //After test section
+    @AfterTest
+    public void AfterTestMethod() throws InterruptedException {
+
+        driver.quit();
 
     }
 
