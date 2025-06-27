@@ -1154,21 +1154,44 @@ public class SwagLabsWebTest {
 
         System.out.println("-----------------------------------------------------------------------------------------\n");
 
-        Thread.sleep(3000);
-
+        Thread.sleep(2000);
 
     }
 
+    //Test Case - Navigate Back To Products Test (TC: 0014)
+    @Test(priority = 15)
+    public void navigateBackToProducts() throws InterruptedException, IOException {
+
+        System.out.println("================================= Test 015 ============================================\n");
+        System.out.println("NAVIGATE BACK TO PRODUCTS TEST CASE\n");
+
+        //Click Back to Home Button
+        driver.findElement(By.xpath("//*[@id=\"back-to-products\"]")).click();
+
+        expectedText = "Products";
+        actualText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span")).getText();
 
 
+        //print actual text
+        System.out.println("Test Case 015 Actual Text: " + actualText);
+
+        if (expectedText.equals(actualText)) {
+
+            System.out.println("TC 015: PASS");
+            System.out.println("Successfully Navigate Back to Product Page \n");
+        } else {
+            System.out.println("TC 015: FAIL");
+            System.out.println("Unsuccessfully Navigate Back to Product Page \n");
+        }
 
 
+        Thread.sleep(2000);
 
 
+        System.out.println("----------------------------------------------------------------------------------------\n");
 
 
-
-
+    }
 
 
 
