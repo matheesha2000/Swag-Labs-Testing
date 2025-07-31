@@ -93,18 +93,3 @@ Matheesha
 📧 https://www.linkedin.com/in/matheesha-kalatuwawa/
 🔗 https://github.com/matheesha2000
 
-📃 License
-This project is licensed under the MIT License.
-
-yaml
-Copy
-Edit
-
----
-
-Let me know if you'd like help customizing this with badges (like `build passing`, `Java version`, etc.) or CI integration (like GitHub Actions).
-
-
-
-
-Ask ChatGPT
