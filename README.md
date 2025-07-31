@@ -35,16 +35,16 @@ This project simulates user interactions on the Swag Labs e-commerce site and ve
 ## 📁 Project Structure
 
 swag-labs-testing/
-├── .idea/ # IDE configuration files (IntelliJ IDEA)
+├── .idea/                # IDE configuration files (IntelliJ IDEA)
 ├── src/
-│ ├── main/ # (Optional) main source code (if any)
-│ └── test/
-│ └── java/
-│ └── TestNG/
-│ └── SwagLabsWebTest.java # Test class(es)
-├── target/ # Compiled files and build output
-├── .gitignore # Git ignore rules
-└── pom.xml # Maven dependencies and build config
+│   ├── main/             # (Optional) main source code (if any)
+│   └── test/
+│       └── java/
+│           └── TestNG/
+│               └── SwagLabsWebTest.java   # Test class(es)
+├── target/               # Compiled files and build output
+├── .gitignore            # Git ignore rules
+└── pom.xml               # Maven dependencies and build config
 
 
 
