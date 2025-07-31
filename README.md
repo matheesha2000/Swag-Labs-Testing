@@ -46,15 +46,7 @@ swag-labs-testing/
 ├── .gitignore # Git ignore rules
 └── pom.xml # Maven dependencies and build config
 
-Copy
-Edit
 
-
-yaml
-Copy
-Edit
-
----
 
 ## ▶️ How to Run the Tests
 
